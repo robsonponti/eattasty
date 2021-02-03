@@ -1,0 +1,137 @@
+  <div class="container">
+    <h2 class="top-ordered text-center"><i class="fa fa-utensils"></i> <strong>MENU</strong></h2>
+    <div class="row text-center">
+      <div class="col-12 d-inline-flex">
+        <div class="row products-list justify-content-center">
+
+          <?php if(!empty($this->meals())){ foreach($this->meals() as $kM => $meals){ ?>
+
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 text-center">
+              <div class="product-item" item-type="1" item-id="2">
+                <div class="product-item-header">
+                  <div class="product-item-header-top">
+                    <div class="product-item-price">
+                     <?=$meals->price?>
+                      <span class="product-item-price-symbol">€</span>
+                    </div>
+                    <div class="item-rating">
+                      <ul class="rating-stars">
+                        <?php for($count = 1; $count <= $meals->rating; $count++){ ?>
+                            <li><i class="fas fa-star rating-icon-star-filled"></i></li>
+                        <?php } ?>
+                      </ul>
+                    </div>
+                  </div>
+                  <img src="<?=$meals->image?>" class="product-image">
+                  <div class="favorite-button">
+                    <a hrf="#">
+                      <i class="far fa-heart"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="product-item-description">
+                  <span class="product-item-title"><?=$meals->title?></span>
+                  <p><?=$meals->description?></p>
+                </div>
+                <button class="btn btn-order-outline" onclick="cart.detail('<?=$meals->id?>');">Adicionar</button>
+              </div>
+            </div>
+
+        <?php } } ?>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!--DETALHES ITEM-->
+<div class="order-details">
+  <span class="close-order-details"><i class="fa fa-times"></i></span>
+
+
+  <div class="order-items-details">
+    
+    <div class="order-item">
+      <div class="order-images">
+        <div class="order-image">
+          <img src="images/burger18.jpg">
+        </div>
+      </div>
+      <div class="order-summary">
+        <div class="order-summary-header">
+          <h2 id="meal-title"></h2>
+          <div class="item-rating">
+            <ul class="rating-stars">
+
+            </ul>
+          </div>
+          <div class="favorite-button">
+            <a hrf="#" title="Adicionar aos meus preferidos">
+              <i class="far fa-heart"></i>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="summary-ingredients">
+          <div class="order-summary-description">
+            <p id="meal-description"></p>
+          </div>
+          <div class="customize-order">
+            <button class="btn btn-dark-red customize-order-ingredients customize-order-button show-ingredients">Personalizar</button>
+          </div>
+
+          <div class="order-summary-ingredients-wrapper">
+            <div class="list-addon order-summary-ingredients">
+              <div class="hide-customize-order customize-order-button hide-ingredients"><i class="far fa-eye-slash"></i></div>
+              <h3 class="list-addon-title">Ingredientes</h3>
+              <div id="ingredients-list">
+
+              </div>
+            </div>
+          </div>
+          <p class="allergens-warning"><i class="fas fa-heartbeat"></i> <span id="allergenics"></span></p>
+
+        </div>
+
+
+          <div class="summary-extras hidden">
+            <div class="list-addon">
+              <h3 class="list-addon-title">Extras</h3>
+              <div id="extras-list">
+              </div>
+            </div>
+          </div>
+
+        <div class="order-summary-footer">
+          
+          <div class="order-summary-footer-details">
+            <div class="input-quantity-wrapper rounded">
+              <input type="number" step="1" min="1" max="" name="quantity" readonly class="range-input" value="1" title="Quantidade" size="4" inputmode="numeric">
+              <input type="button" value="-" class="range-buttons range-minus" item-id="">
+              <input type="button" value="+" class="range-buttons range-plus" item-id="">
+            </div>
+
+            <div class="order-summary-value">
+              <h3 class="summary-order-value">€<span class="order-item-value"></span></h3>
+            </div>
+          </div>
+
+          <div class="order-summary-footer-buttons text-right">
+            <button class="btn btn-dark-red add-to-cart" onclick="cart.add(this);" item-id="">Adicionar</button>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+</div>

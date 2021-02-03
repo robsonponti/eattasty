@@ -1,0 +1,102 @@
+input:focus{
+	box-shadow: none!important;
+	outline: none;
+}
+.list-addon {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #f1f1f1;
+    border-radius: 6px;
+    position: relative;
+}
+.list-addon-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    position: absolute;
+    margin-bottom: 8px;
+    margin-top: -34px;
+    padding: 5px 8px;
+    background-color: #fff;
+    display: inline-block;
+    font-weight: 700;
+}
+.list-addon .list-addon-row {
+    display: inline-block;
+    width: 100%;
+    /*width: 49.5%;*/
+    border: 1px solid transparent;
+    margin: 2px 0;
+    vertical-align: top;
+}
+.list-addon .list-addon-row label {
+    margin: 0;
+    background-color: #f1f1f1;
+    padding: 3px 5px;
+    vertical-align: middle;
+    border-radius: 4px;
+    display: block;
+    font-size: 11px;
+}
+.list-addon .list-addon-row label input[type=checkbox] {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+    margin-top: 0;
+}
+.input-quantity-wrapper.rounded{
+    border-radius: 300px!important;
+}
+.input-quantity-wrapper{
+    display: inline-block;
+    height: 47px;
+    position: relative;
+    margin-right: 3px;
+    padding: 0 30px;
+    background-color: #f5f5f5;
+    vertical-align: top;
+}
+.input-quantity-wrapper input[type=number] {
+    display: block;
+    width: 46px !important;
+    height: 46px;
+    padding: 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    border: none !important;
+    background: 0 0;
+    box-shadow: none;
+    line-height: 46px;
+    vertical-align: middle;
+}
+.input-quantity-wrapper input[type=number]::-webkit-inner-spin-button, 
+.input-quantity-wrapper input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.input-quantity-wrapper .range-plus, 
+.input-quantity-wrapper .range-minus{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    top: 50%;
+    margin-top: -15px;
+    border: none !important;
+    background: 0 0 !important;
+    padding: 0;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 17px;
+    cursor: pointer;
+}
+.input-quantity-wrapper .range-plus {
+    right: 3px;
+}
+
+.input-quantity-wrapper .range-minus {
+    left: 3px;
+}
