@@ -10,9 +10,9 @@ class DB{
     private $error;
     private $conn;
     private $host = 'localhost';
-    private $dbname = 'eattasty';
-    private $user = 'root';
-    private $password = 'rob080594';
+    private $dbname = ''; //nome base dados
+    private $user = ''; //utilizador acesso base dados
+    private $password = ''; //palavra-passe base dados
 
     public function __construct(){
 
